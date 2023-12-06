@@ -6,19 +6,19 @@ Stampare in console la bici con peso minore utilizzando destructuring e template
 const bikes = [
     {
         nome: 'Trek',
-        peso:   10,
+        peso: 10,
     },
     {
         nome: 'Specialized',
-        peso:   7,
+        peso: 7,
     },
     {
         nome: 'Giant',
-        peso:   9,
+        peso: 9,
     },
     {
         nome: 'Cannondale',
-        peso:   12,
+        peso: 12,
     }
 ]
 
@@ -30,10 +30,10 @@ let bikeName;
 bikes.forEach((elem) => {
 
     /* Destructuring */
-    let {nome, peso} = elem;
+    let { nome, peso } = elem;
 
     /* Se il peso dell'oggetto è minore lo posizione nella variabile */
-    if(peso < minWeight){
+    if (peso < minWeight) {
         minWeight = peso;
         bikeName = nome;
     }
@@ -83,11 +83,11 @@ teams.forEach((elem) => {
     let { squadra } = elem;
 
     /* Generazione valori casuali */
-    punti = Math.floor(Math.random() * 5 );
-    falli = Math.floor(Math.random() * 5 );
+    punti = Math.floor(Math.random() * 5);
+    falli = Math.floor(Math.random() * 5);
 
     /* Push usando il destructuring della squadra e dei falli */
-    statics.push({squadra, falli})
+    statics.push({ squadra, falli })
 });
 
 /* Stampa in console delle statistiche */
@@ -130,11 +130,20 @@ let articleList = [
     },
 ]
 
-/* Funzione per la generazione casuale delle lettere */
-function generateRandom(){
-    let randomNum = Math.floor(Math.random() * 26 ) + 1;
-    let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',]
-    console.log(alphabet[randomNum]);
-}
+/* Ciclo per ogni elemento */
+articleList.forEach((elem) => {
 
-generateRandom();
+    /* Array delle lettere */
+    let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+    /* Generazione casuale di un numero equivalente all'alfabeto */
+    let randomNum = Math.floor(Math.random() * (alphabet.length - 1)) + 1;
+
+    /* Creazione della chiave lettera */
+    elem.letter = alphabet[randomNum];
+})
+
+/* Output in console */
+console.log(articleList);
+
+
