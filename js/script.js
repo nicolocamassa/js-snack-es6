@@ -134,7 +134,7 @@ let articleList = [
 articleList.forEach((elem) => {
 
     /* Array delle lettere */
-    let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
     /* Generazione casuale di un numero equivalente all'alfabeto */
     let randomNum = Math.floor(Math.random() * (alphabet.length - 1)) + 1;
