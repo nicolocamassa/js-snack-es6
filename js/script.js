@@ -40,7 +40,10 @@ bikes.forEach((elem) => {
 });
 
 /* Stampa in console del risultato */
-console.log(`Il peso minimo è: ${minWeight} della ${bikeName}`);
+console.log(`Il peso minimo è: ${minWeight}Kg della ${bikeName}`);
+
+let minWeightIndex = document.getElementById('minWeight');
+minWeightIndex.innerText = `Il peso minimo è: ${minWeight}Kg della ${bikeName}`
 
 
 /* SNACK 2
@@ -90,8 +93,18 @@ teams.forEach((elem) => {
     statics.push({ squadra, falli })
 });
 
+let teamsIndex = document.getElementById('teams');
+
 /* Stampa in console delle statistiche */
 console.log(statics)
+
+statics.forEach((elem) => {
+    let { squadra, falli } = elem;
+
+    let newP = document.createElement('p');
+    let newText = teamsIndex.appendChild(newP);
+    newText.innerHTML = `La squadra ${squadra} ha subito ${falli} falli`
+})
 
 
 /* BONUS 1: SNACK 3
@@ -130,6 +143,9 @@ let articleList = [
     },
 ]
 
+
+let clothesIndex = document.getElementById('clothes');
+
 /* Ciclo per ogni elemento */
 articleList.forEach((elem) => {
 
@@ -141,6 +157,14 @@ articleList.forEach((elem) => {
 
     /* Creazione della chiave lettera */
     elem.position = alphabet[randomNum];
+
+    let {name, type, color, position } = elem;
+    console.log(name, type, color, position);
+
+    let newP = document.createElement('p');
+    let newText = clothesIndex.appendChild(newP);
+    newText.innerHTML = `${name} è ${type} di colore ${color} con etichetta ${position}`
+
 })
 
 /* Output in console */
