@@ -24,7 +24,7 @@ const bikes = [
 
 /* Peso minimo e nome della bici */
 let minWeight = bikes[0]['peso'];
-let bikeName;
+let bikeName = bikes[0]['nome'];;
 
 /* Ciclo per la classe bikes  */
 bikes.forEach((elem) => {
