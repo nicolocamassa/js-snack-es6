@@ -130,4 +130,11 @@ let articleList = [
     },
 ]
 
+/* Funzione per la generazione casuale delle lettere */
+function generateRandom(){
+    let randomNum = Math.floor(Math.random() * 26 ) + 1;
+    let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',]
+    console.log(alphabet[randomNum]);
+}
 
+generateRandom();
