@@ -140,7 +140,7 @@ articleList.forEach((elem) => {
     let randomNum = Math.floor(Math.random() * (alphabet.length - 1)) + 1;
 
     /* Creazione della chiave lettera */
-    elem.letter = alphabet[randomNum];
+    elem.position = alphabet[randomNum];
 })
 
 /* Output in console */
