@@ -158,12 +158,30 @@ articleList.forEach((elem) => {
     /* Creazione della chiave lettera */
     elem.position = alphabet[randomNum];
 
-    let {name, type, color, position } = elem;
-    console.log(name, type, color, position);
+    let { name, type, color, position } = elem;
 
     let newP = document.createElement('p');
     let newText = clothesIndex.appendChild(newP);
-    newText.innerHTML = `${name} è ${type} di colore ${color} con etichetta ${position}`
+
+    let article = '';
+    switch (type) {
+        case 'tshirt':
+            article = 'è una'
+            break;
+        case 'occhiali':
+            article = 'sono degli'
+            break;
+        case 'scarpe':
+            article = 'sono delle'
+            break;
+        case 'borsa':
+            article = 'è una'
+            break;
+
+    }
+
+    newText.innerHTML = `${name} ${article} ${type} di colore ${color} con etichetta ${position}`
+
 
 })
 
